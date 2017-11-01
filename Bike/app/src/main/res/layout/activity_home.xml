@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="bike.com.bike.HomeActivity">
+
+    <RadioGroup
+        android:id="@+id/tabContainer"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/tabs_top_line"
+        android:paddingTop="5dp"
+        >
+        <RadioButton
+            android:id="@+id/home"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_item_home"
+            android:gravity="center"
+            android:text="首页"
+            android:textSize="12sp"
+            android:textColor="@color/tab_item_font_color"
+            android:checked="false" />
+        <RadioButton
+            android:id="@+id/pay"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_item_goods"
+            android:gravity="center"
+            android:text="交易"
+            android:textSize="12sp"
+            android:textColor="@color/tab_item_font_color"
+            />
+        <RadioButton
+            android:id="@+id/activite"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_item_repair"
+            android:gravity="center"
+            android:text="活动"
+            android:textSize="12sp"
+            android:textColor="@color/tab_item_font_color"
+            />
+
+        <RadioButton
+            android:id="@+id/trolley"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_item_trolley"
+            android:gravity="center"
+            android:text="购物车"
+            android:textSize="12sp"
+            android:textColor="@color/tab_item_font_color"
+            />
+        <RadioButton
+            android:id="@+id/mine"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:button="@null"
+            android:drawableTop="@drawable/tab_item_mine"
+            android:gravity="center"
+            android:text="我的"
+            android:textSize="12sp"
+            android:textColor="@color/tab_item_font_color"
+            />
+    </RadioGroup>
+
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tabContainer">
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,74 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="bike.com.bike.fragment.HomeFragment">
+
+    <RelativeLayout
+        android:id="@+id/mLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <com.baidu.mapapi.map.MapView
+        android:id="@+id/bmapView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:clickable="true"
+        android:layout_below="@+id/logo" />
+
+    <ImageView
+        android:id="@+id/logo"
+        android:src="@mipmap/bike"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:scaleType="fitXY"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <Button
+        android:id="@+id/user"
+        android:background="@mipmap/user"
+        android:layout_width="30dp"
+        android:layout_height="25dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_alignTop="@+id/logo"/>
+
+    <EditText
+        android:id="@+id/search"
+        android:background="@mipmap/search"
+        android:layout_width="300dp"
+        android:layout_height="35dp"
+        android:hint="请输入目的地"
+        android:gravity="left|center_vertical"
+        android:textColorHint="#cccccc"
+        android:paddingLeft="40dp"
+        android:singleLine="true"
+        android:textCursorDrawable="@drawable/color_cursor"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/logo"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center_horizontal|top" />
+
+     <TextView
+         android:id="@+id/getText"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content" />
+
+    <Button
+        android:id="@+id/location"
+        android:background="@mipmap/location"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginBottom="60dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+
+        android:layout_gravity="left|bottom" />
+
+    </RelativeLayout>
+</FrameLayout>

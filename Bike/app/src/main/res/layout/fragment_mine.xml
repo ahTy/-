@@ -1,0 +1,110 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="bike.com.bike.fragment.MineFragment">
+    <!-- TODO: Update blank fragment layout -->
+    <RelativeLayout
+        android:id="@+id/head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/bike"
+        >
+
+        <Button
+            android:id="@+id/set"
+            android:layout_width="45dp"
+            android:layout_height="25dp"
+            android:text="设置"
+            android:gravity="left"
+            android:background="#00000000"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"/>
+
+        <Button
+            android:id="@+id/message"
+            android:layout_width="45dp"
+            android:layout_height="25dp"
+            android:text="消息"
+            android:gravity="right"
+            android:background="#00000000"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_alignParentRight="true"/>
+
+        <Button
+            android:id="@+id/theme"
+            android:layout_width="45dp"
+            android:layout_height="25dp"
+            android:text="主题"
+            android:gravity="right"
+            android:background="#00000000"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@id/message"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/user"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/head"
+        android:layout_above="@+id/function"
+        android:background="#ABC">
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/touxiang" />
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:text="那年今日"
+            android:textSize="18sp"
+            android:textColor="#000"
+            android:layout_centerVertical="true"
+            android:layout_toRightOf="@+id/img"
+            android:layout_toEndOf="@+id/img" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/function"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_above="@+id/contentm">
+
+        <Button
+            android:id="@+id/collection"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="我的收藏"
+            android:background="#00000000" />
+
+        <Button
+            android:id="@+id/footprint"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="match_parent"
+            android:text="我的足迹"
+            android:background="#00000000" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/contentm"
+        android:layout_width="match_parent"
+        android:layout_height="420dp"
+        android:layout_alignParentBottom="true">
+
+    </RelativeLayout>
+
+</RelativeLayout>

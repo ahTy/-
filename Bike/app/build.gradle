@@ -1,0 +1,75 @@
+apply plugin: 'com.android.application'
+
+android {
+    signingConfigs {
+        release {
+            keyAlias 'E_Bike'
+            keyPassword '19951228'
+            storeFile file('D:/Android/E_Bike.jks')
+            storePassword '19951228'
+            v2SigningEnabled false
+        }
+        config {
+        }
+    }
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+    defaultConfig {
+        applicationId "bike.com.bike"
+        minSdkVersion 14
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0"
+        multiDexEnabled true
+    }
+    productFlavors {
+        dev {
+            // Enable pre-dexing to produce an APK that can be tested on
+            // Android 5.0+ without the time-consuming DEX build processes.
+            minSdkVersion 21
+        }
+        prod {
+            // The actual minSdkVersion for the production version.
+            minSdkVersion 14
+        }
+    }
+    buildTypes {
+        /**
+         debug {//debug时使用release签名
+         signingConfig signingConfigs.release
+         //Zip代码压缩优化
+         zipAlignEnabled true
+         //移除无用资源
+         shrinkResources true}**/
+        release {
+            //引用正式签名
+            //multiDexKeepFile file 'multidex-config.txt'
+            signingConfig android.signingConfigs.release
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            //Zip代码压缩优化
+            zipAlignEnabled true
+            //移除无用资源
+            //shrinkResources true
+        }
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/BaiduLBS_Android.jar')
+    compile 'com.android.support:appcompat-v7:25.0.1'
+    compile 'com.google.code.gson:gson:2.8.0'
+    compile 'com.github.bumptech.glide:glide:4.0.0-RC0'
+    compile 'eu.the4thfloor.volley:com.android.volley:2015.05.28'
+    compile 'com.android.support:support-v4:25.3.1'
+    compile 'com.google.android.gms:play-services:10.2.6'
+    compile 'com.jude:rollviewpager:1.2.9'
+    compile 'com.android.support:multidex:1.0.1'
+    testCompile 'junit:junit:4.12'
+}

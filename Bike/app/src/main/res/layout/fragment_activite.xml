@@ -1,0 +1,25 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.ActiviteFragment"
+    android:background="#11111111">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:scaleType="centerCrop"
+        android:src="@mipmap/act_t"
+        android:id="@+id/imageView"
+        android:layout_marginBottom="1dp"/>
+
+    <ImageView
+        android:id="@+id/act1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="fitStart"
+        android:src="@drawable/b_select"
+        android:layout_below="@+id/imageView"
+        android:layout_alignParentStart="true" />
+
+</RelativeLayout>

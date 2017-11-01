@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:src="@mipmap/ii"
+        android:scaleType="centerCrop"
+        android:layout_marginBottom="1dp"/>
+    <com.jude.rollviewpager.RollPagerView
+        android:id="@+id/rpv"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"/>
+    <ImageView
+        android:layout_marginTop="1dp"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:src="@mipmap/p_head"
+        android:scaleType="centerCrop"/>
+</LinearLayout>

@@ -1,0 +1,75 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="bike.com.bike.fragment.Mine_NewsFragment">
+
+    <RadioGroup
+        android:id="@+id/newsbt"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:orientation="horizontal"
+        android:paddingTop="5dp"
+        android:background="#F4F4F4"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <RadioButton
+            android:id="@+id/first"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:text="健康知识"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:textColor="@color/tab_item_font_color"
+            />
+
+        <RadioButton
+            android:id="@+id/second"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:text="旅游资讯"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:textColor="@color/tab_item_font_color"
+            />
+
+        <RadioButton
+            android:id="@+id/third"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:text="移动互联"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:textColor="@color/tab_item_font_color"
+            />
+
+        <RadioButton
+            android:id="@+id/forth"
+            android:layout_weight="1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:button="@null"
+            android:text="IT资讯"
+            android:textSize="18dp"
+            android:gravity="center"
+            android:textColor="@color/tab_item_font_color"
+            />
+    </RadioGroup>
+
+    <ListView
+        android:id="@+id/lv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        >
+    </ListView>
+
+</RelativeLayout>

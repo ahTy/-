@@ -1,0 +1,81 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.PayFragment">
+
+    <android.support.v4.widget.SlidingPaneLayout
+        android:id="@+id/SliP"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/left"
+        android:layout_width="60dp"
+        android:layout_height="match_parent">
+
+        <RadioGroup
+            android:id="@+id/payContainer"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/tabs_top_line"
+            >
+            <RadioButton
+                android:id="@+id/New"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="新车"
+                android:textSize="18sp"
+                android:textColor="@color/tab_item_font_color"
+                android:checked="false"
+                />
+            <RadioButton
+                android:id="@+id/used"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="二手车"
+                android:textSize="18sp"
+                android:textColor="@color/tab_item_font_color"
+                />
+            <RadioButton
+                android:id="@+id/rent"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:text="租车"
+                android:textSize="18sp"
+                android:textColor="@color/tab_item_font_color"
+                />
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/right"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_toRightOf="@id/left">
+    </RelativeLayout>
+
+    </android.support.v4.widget.SlidingPaneLayout>
+
+    <ImageView
+        android:id="@+id/Prompt"
+        android:layout_width="15dp"
+        android:layout_height="65dp"
+        android:layout_marginLeft="-5dp"
+        android:src="@mipmap/t"
+        android:scaleType="fitXY"
+        android:layout_centerVertical="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+</RelativeLayout>
